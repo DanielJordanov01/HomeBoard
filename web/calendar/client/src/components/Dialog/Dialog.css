@@ -1,0 +1,33 @@
+.dialog-box {
+    display: inline-block;
+    position: absolute;
+    border-radius: 0.5em;
+    min-width: 30vw;
+    max-width: 30vw;
+    background-color: #dedede;
+    padding: 1.8em;
+    box-shadow: 0.2em 0.2em 0.2em grey;
+    top: 35%;
+    left: 35%;
+    z-index: 10;
+}
+
+.dialog-box #title {
+    min-width: 20vw;
+    height: 4vh;
+}
+
+.dialog-box textarea {
+    min-width: 20vw;
+    min-height: 25vh;
+    margin-top: 1.3em;
+}
+
+.dialog-box #title, textarea {
+    border: none;
+    border-radius: 0.2em;
+}
+
+.buttons button{
+    margin: 0.8em;
+}

@@ -1,0 +1,23 @@
+.note {
+    display: inline-block;
+    width: 300px;
+    margin: 0.8em;
+    min-height: 35vh;
+    border-radius: 0.5em;
+    background: linear-gradient(90deg, #197909 10%, rgba(0,255,63,1) 100%);
+    box-shadow: 0.2em 0.2em 0.2em grey;
+}
+
+.text-content {
+    margin-top: 1.8em;
+}
+
+.note-button {
+    font-size: 1.3em;
+    cursor: pointer;
+    margin: 0.5em;
+}
+
+.icons {
+    margin-top: 15vh
+}

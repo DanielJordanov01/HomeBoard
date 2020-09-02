@@ -1,0 +1,10 @@
+.addButton button {
+    display: inline-block;
+    font-size: 150%;
+    margin-top: 1.3em;
+    margin-bottom: 1.3em;
+    width: 60pxs;
+    box-shadow: 0.1em 0.1em 0.2em gray;
+    background-color: #c2c2c2;
+}
+
