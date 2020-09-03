@@ -73,9 +73,9 @@ def insert_row(connection, table, title, description):
 
 
 @dispatch(object, str, str, str, str)
-def insert_row(connection, table, start_date, end_date, event):
+def insert_row(connection, table, event, start_date, end_date):
     try:
-        row = (start_date, end_date, event)
+        row = (event, start_date, end_date)
         statement = f"""INSERT INTO {table}
                         (event, start_date, end_date)
                         VALUES
@@ -177,8 +177,8 @@ def get_event(conn, id):
     return get_row(conn, CALENDAR_TABLE, id)
 
 
-def create_event(conn, start_date, end_date, event):
-    return insert_row(conn, CALENDAR_TABLE, start_date, end_date, event)
+def create_event(conn, event, start_date, end_date):
+    return insert_row(conn, CALENDAR_TABLE, event, start_date, end_date)
 
 
 def edit_event(conn, id, start_date, end_date, event):
@@ -187,6 +187,4 @@ def edit_event(conn, id, start_date, end_date, event):
 
 def remove_event(conn, id):
     return delete_row(conn, CALENDAR_TABLE, id)
-
-
 

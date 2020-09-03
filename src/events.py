@@ -1,10 +1,10 @@
 class Event:
 
-    def __init__(self, row_id, start_date, end_date, status_id, event):
+    def __init__(self, row_id, event, start_date, end_date, status_id):
         self.id = row_id
-        self.start_date = start_date
-        self.end_date = end_date
-        self.event = event
+        self.title = event
+        self.start = start_date
+        self.end = end_date
         self.status_id = status_id
 
     @staticmethod

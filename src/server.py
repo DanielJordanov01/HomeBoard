@@ -91,10 +91,10 @@ def event(row_id):
 @app.route('/calendar/create', methods=['POST'])
 def insert_event():
     try:
-        data = request.data
         conn = connect_db(DATABASE)
-        note = json.loads(data.decode('utf-8'))
-        create_event(conn, '2020-03-02', '2020-0303', 'test event')
+        data = request.data
+        event = json.loads(data.decode('utf-8'))
+        create_event(conn, ''.join(event['title']), ''.join(event['start']), ''.join(event['end']))
         return jsonify('event created')
     except:
         abort(500)

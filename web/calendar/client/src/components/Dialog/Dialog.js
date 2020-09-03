@@ -1,4 +1,5 @@
 import React from 'react'
+import axios from 'axios'
 import "./Dialog.css"
 
 class Dialog extends React.Component {
@@ -22,8 +23,17 @@ class Dialog extends React.Component {
                 'title': this.state.data,
                 'start': this.props.ev.start,
                 'end': this.props.ev.end,
+                'id': 127
             }
         }
+
+        axios({
+            method: 'post',
+            headers: {'Access-Control-Allow-Origin': '*'},
+            url: 'http://localhost:5000/calendar/create',
+            data: event
+        })
+
         this.props.createEvent(event)
         this.setState({data: ''})
     }

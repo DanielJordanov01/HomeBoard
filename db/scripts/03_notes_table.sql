@@ -15,7 +15,3 @@ create table notes
 
 create unique index notes_id_uindex
     on notes (id);
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master

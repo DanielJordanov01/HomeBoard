@@ -53,6 +53,13 @@ class App extends React.Component {
       }
     })
 
+    axios({
+            method: 'delete',
+            headers: {'Access-Control-Allow-Origin': '*'},
+            url: 'http://localhost:5000/calendar/delete/' + e['id'],
+        })
+    console.log(e['id'])
+
     this.setState({events: eventsArr})
   }
 
